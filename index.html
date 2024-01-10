@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc2</title>
+    <style>  
+        h1 {  
+            text-align: center;  
+            padding: 20px;  
+            background-color: skyblue; 
+            border-radius: 500px; 
+            color: rgb(15, 14, 14);  
+            }  
+          
+        #clear{  
+        width: 200px;  
+        border: 1px solid rgb(8, 8, 8);  
+            border-radius: 3px;  
+            padding: 20px;  
+            background-color: red;  
+        }  
+          
+        .formstyle  
+        {  
+        width: 300px;  
+        height: 600px;  
+        margin: auto;  
+        border: 3px solid skyblue;  
+        border-radius: 30px;  
+        padding: 20px;  
+        }  
+          
+          
+          
+        input  
+        {  
+        width: 55px;  
+        background-color: rgb(28, 0, 128);  
+        color: rgba(255, 255, 255, 0.975);  
+        border: 1px solid rgb(0, 0, 0);  
+            border-radius: 8px;  
+            padding: 20px;  
+            margin: 5px;  
+            font-size: 15px;  
+        }  
+          
+          
+        #calc{  
+        width: 250px;  
+        border: 3px solid black;  
+            border-radius: 3px;  
+            padding: 25px;  
+            margin: center;  
+        }  
+          
+        </style>  
+</head>
+<body>
+    <h1>
+        Scientific Calculator
+    </h1>
+    <div class="formstyle">
+        <form name = 'form1'>
+            <input id="calc" type="text" name="answer">
+            <div>
+                <input type="button" value="AC" onclick="form1.answer.value += 'AC'">
+                <input type="button" value="DE" onclick="form1.answer.value += 'DE'">
+                <input type="button" value="." onclick="form1.answer.value += '.'">
+                <input type="button" value="/" onclick="form1.answer.value += '/'">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="form1.answer.value += '7'">
+                <input type="button" value="8" onclick="form1.answer.value += '8'">
+                <input type="button" value="9" onclick="form1.answer.value += '9'">
+                <input type="button" value="*" onclick="form1.answer.value += '*'">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="form1.answer.value += '4'">
+                <input type="button" value="5" onclick="form1.answer.value += '5'">
+                <input type="button" value="6" onclick="form1.answer.value += '6'">
+                <input type="button" value="-" onclick="form1.answer.value += '-'">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="form1.answer.value += '1'">
+                <input type="button" value="2" onclick="form1.answer.value += '2'">
+                <input type="button" value="3" onclick="form1.answer.value += '3'">
+                <input type="button" value="+" onclick="form1.answer.value += '+'">
+            </div>
+            <div>
+                <input type="button" value="00" onclick="form1.answer.value += '00'">
+                <input type="button" value="0" onclick="form1.answer.value += '0'">
+            </div>
+            <div>
+                <input type="button" value="sin" onclick="form1.answer.value = Math.sin(form1.answer.value)">
+                <input type="button" value="cos" onclick="form1.answer.value = Math.cos(form1.answer.value)">
+                <input type="button" value="tan" onclick="form1.answer.value = Math.tan(form1.answer.value)">
+                <input type="button" value="^" onclick="form1.answer.value = Math.sqrt(form1.answer.value)">
+            </div>
+            <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">  
+            <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
+        </form>
+    </div>
+    <script>
+        function sin()
+        {
+            screen.value=Math.sin(screen.value);
+        }
+        function cos()
+        {
+            screen.value=Math.Cos(screen.value);
+        }
+        function tan()
+        {
+            screen.value=Math.tan(screen.value);
+        }
+    </script>
+</body>
+</html>
